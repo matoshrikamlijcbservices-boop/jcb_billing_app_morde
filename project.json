@@ -1,0 +1,26 @@
+{
+  "overview": "JCB Billing App for Matoshri Kamljadevi Earthmovers and Land Developers. A full-stack PWA for managing JCB machine billing, customer records, and payment tracking with real-time cloud sync across all devices via Internet Computer canister backend and Internet Identity login.",
+  "features": [
+    "Bills stored in cloud canister — accessible from any device instantly",
+    "Internet Identity login for secure, private data per account",
+    "Auto-sync every 1-2 seconds across all devices",
+    "Offline support with local cache and sync queue",
+    "Batch export to PNG/PDF per customer",
+    "Payment tracking with NOT PAID / PARTIALLY PAID / PAID badges",
+    "Dark/night mode toggle",
+    "Customer autocomplete for fast entry",
+    "Filter bills by customer, date range, and payment status",
+    "PWA installable on Android, iPhone, and desktop"
+  ],
+  "category": "productivity",
+  "tags": [
+    "billing",
+    "jcb",
+    "construction",
+    "invoicing",
+    "pwa",
+    "offline",
+    "canister-sync"
+  ],
+  "last_updated": "2026-05-09T07:49:47.032Z"
+}

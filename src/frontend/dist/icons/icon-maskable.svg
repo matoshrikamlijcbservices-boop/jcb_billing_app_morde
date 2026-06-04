@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Full bleed background (maskable — safe zone is center 80%) -->
+  <rect width="512" height="512" fill="#d97706"/>
+  <!-- Decorative stripe at top -->
+  <rect x="0" y="0" width="512" height="12" fill="#b45309"/>
+  <!-- Machine body (within safe zone, centered) -->
+  <rect x="100" y="310" width="220" height="82" rx="12" fill="#1c1c08"/>
+  <!-- Cab -->
+  <rect x="210" y="248" width="100" height="70" rx="8" fill="#1c1c08"/>
+  <!-- Cab window -->
+  <rect x="224" y="260" width="72" height="44" rx="5" fill="#d97706" opacity="0.35"/>
+  <!-- Arm -->
+  <rect x="290" y="195" width="95" height="18" rx="9" transform="rotate(-25 290 195)"/>
+  <!-- Bucket -->
+  <path d="M365 295 L400 278 L412 318 L372 326 Z" fill="#1c1c08"/>
+  <!-- Tracks -->
+  <rect x="82" y="388" width="248" height="34" rx="17" fill="#111105"/>
+  <circle cx="116" cy="405" r="13" fill="#d97706"/>
+  <circle cx="162" cy="405" r="10" fill="#d97706" opacity="0.7"/>
+  <circle cx="206" cy="405" r="10" fill="#d97706" opacity="0.7"/>
+  <circle cx="250" cy="405" r="10" fill="#d97706" opacity="0.7"/>
+  <circle cx="296" cy="405" r="13" fill="#d97706"/>
+  <!-- JCB label -->
+  <rect x="100" y="170" width="220" height="58" rx="10" fill="#1c1c08" opacity="0.85"/>
+  <text x="210" y="212" font-family="Arial Black, Arial, sans-serif" font-size="42" font-weight="900" fill="#d97706" text-anchor="middle" letter-spacing="4">JCB</text>
+</svg>

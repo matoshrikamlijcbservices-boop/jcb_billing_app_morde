@@ -1,0 +1,75 @@
+// Version: 1.0.0
+type Bill__816927886 =
+  {
+    amountPaid : Float;
+    breakerTotalCost : Float;
+    breakerTotalHours : Float;
+    bucketTotalCost : Float;
+    bucketTotalHours : Float;
+    customerContact : Text;
+    customerName : Text;
+    dateOfWork : Text;
+    grandTotal : Float;
+    id : Text;
+    machines : [Machine__368353597];
+    paymentDate : ?Text;
+    paymentStatus : Text;
+    rates : Rates__544805435;
+    savedAt : Int
+  };
+type Customer__863928425 = {contact : Text; name : Text; updatedAt : Int};
+type Data__791452850<K, V> =
+  {var count : Nat__490723111; kvs : [var ?(K, V)]};
+type Entry__960551541 =
+  {endTime : Text; entryType : Text; id : Text; startTime : Text};
+type Internal__8484328<K, V> =
+  {children : [var ?Node__46230540<K, V>]; data : Data__791452850<K, V>};
+type Leaf__809889148<K, V> = {data : Data__791452850<K, V>};
+type Machine__368353597 =
+  {entries : [Entry__960551541]; id : Text; number : Text};
+type Map__158565046<K, V> = Map__297112838<K, V>;
+type Map__297112838<K, V> =
+  {var root : Node__46230540<K, V>; var size : Nat__490723111};
+type Map__605269027<K, V> = Map__158565046<K, V>;
+type Nat__490723111 = Nat__920180692;
+type Nat__920180692 = Nat;
+type Node__46230540<K, V> =
+  {#internal : Internal__8484328<K, V>; #leaf : Leaf__809889148<K, V>};
+type PaymentReminder__630007400 =
+  {
+    amountDue : Float;
+    billId : Text;
+    billNumber : Text;
+    createdAt : Int;
+    customerName : Text;
+    dueDate : Int;
+    id : Text;
+    notes : Text
+  };
+type Rates__544805435 = {breaker : Float; bucket : Float};
+type UserBills__796450324 = Map__605269027<Text, Bill__816927886>;
+type UserCustomers__322572616 = Map__605269027<Text, Customer__863928425>;
+type UserReminders__89444746 =
+  Map__605269027<Text, PaymentReminder__630007400>;
+actor {
+  stable bills :
+    {
+      var root : Node__46230540<Principal, UserBills__796450324>;
+      var size : Nat__490723111
+    };
+  stable customers :
+    {
+      var root : Node__46230540<Principal, UserCustomers__322572616>;
+      var size : Nat__490723111
+    };
+  stable rates :
+    {
+      var root : Node__46230540<Principal, Rates__544805435>;
+      var size : Nat__490723111
+    };
+  stable reminders :
+    {
+      var root : Node__46230540<Principal, UserReminders__89444746>;
+      var size : Nat__490723111
+    }
+};

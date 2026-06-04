@@ -1,0 +1,26 @@
+{
+  "name": "JCB Billing App - Matoshri Kamljadevi",
+  "short_name": "JCB Billing",
+  "description": "JCB machine billing for Matoshri Kamljadevi Earthmovers and Land Developers",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a1a0a",
+  "theme_color": "#d97706",
+  "orientation": "portrait-primary",
+  "lang": "en-IN",
+  "categories": ["business", "productivity"],
+  "icons": [
+    {
+      "src": "/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-maskable.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}

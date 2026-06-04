@@ -1,0 +1,68 @@
+type Rates = 
+ record {
+   breaker: float64;
+   bucket: float64;
+ };
+type PaymentReminder = 
+ record {
+   amountDue: float64;
+   billId: text;
+   billNumber: text;
+   createdAt: int;
+   customerName: text;
+   dueDate: int;
+   id: text;
+   notes: text;
+ };
+type Machine = 
+ record {
+   entries: vec Entry;
+   id: text;
+   number: text;
+ };
+type Entry = 
+ record {
+   endTime: text;
+   entryType: text;
+   id: text;
+   startTime: text;
+ };
+type Customer = 
+ record {
+   contact: text;
+   name: text;
+   updatedAt: int;
+ };
+type Bill = 
+ record {
+   amountPaid: float64;
+   breakerTotalCost: float64;
+   breakerTotalHours: float64;
+   bucketTotalCost: float64;
+   bucketTotalHours: float64;
+   customerContact: text;
+   customerName: text;
+   dateOfWork: text;
+   grandTotal: float64;
+   id: text;
+   machines: vec Machine;
+   paymentDate: opt text;
+   paymentStatus: text;
+   rates: Rates;
+   savedAt: int;
+ };
+service : {
+  createBill: (bill: Bill) -> ();
+  createReminder: (reminder: PaymentReminder) -> (bool);
+  deleteBill: (id: text) -> ();
+  deleteCustomer: (nameContact: text) -> ();
+  deleteReminder: (id: text) -> (bool);
+  getBills: () -> (vec Bill) query;
+  getCustomers: () -> (vec Customer) query;
+  getRates: () -> (opt Rates) query;
+  getReminders: () -> (vec PaymentReminder) query;
+  getServerTime: () -> (int) query;
+  setRates: (r: Rates) -> ();
+  updateBill: (bill: Bill) -> ();
+  upsertCustomer: (customer: Customer) -> ();
+}

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Background -->
+  <rect width="512" height="512" rx="96" fill="#d97706"/>
+  <!-- Top accent bar -->
+  <rect x="0" y="0" width="512" height="10" rx="0" fill="#b45309"/>
+  <!-- Excavator arm (simple geometric) -->
+  <g fill="#1c1c08">
+    <!-- Arm base -->
+    <rect x="320" y="200" width="120" height="22" rx="11" transform="rotate(-30 320 200)"/>
+    <!-- Arm segment -->
+    <rect x="360" y="280" width="90" height="18" rx="9" transform="rotate(20 360 280)"/>
+    <!-- Bucket -->
+    <path d="M390 330 L430 310 L445 355 L400 365 Z" fill="#1c1c08"/>
+    <!-- Bucket teeth -->
+    <rect x="397" y="363" width="8" height="12" rx="2" fill="#1c1c08"/>
+    <rect x="412" y="361" width="8" height="12" rx="2" fill="#1c1c08"/>
+    <rect x="427" y="356" width="8" height="12" rx="2" fill="#1c1c08"/>
+  </g>
+  <!-- Machine body -->
+  <rect x="80" y="300" width="260" height="100" rx="14" fill="#1c1c08"/>
+  <!-- Cab -->
+  <rect x="200" y="230" width="130" height="80" rx="10" fill="#1c1c08"/>
+  <!-- Cab window -->
+  <rect x="215" y="243" width="95" height="52" rx="6" fill="#d97706" opacity="0.35"/>
+  <!-- Tracks -->
+  <rect x="60" y="395" width="300" height="40" rx="20" fill="#111105"/>
+  <!-- Track rollers -->
+  <circle cx="105" cy="415" r="16" fill="#d97706"/>
+  <circle cx="160" cy="415" r="12" fill="#d97706" opacity="0.7"/>
+  <circle cx="210" cy="415" r="12" fill="#d97706" opacity="0.7"/>
+  <circle cx="260" cy="415" r="12" fill="#d97706" opacity="0.7"/>
+  <circle cx="315" cy="415" r="16" fill="#d97706"/>
+  <!-- JCB text -->
+  <text x="130" y="370" font-family="Arial Black, Arial, sans-serif" font-size="58" font-weight="900" fill="#d97706" letter-spacing="4">JCB</text>
+  <!-- Company initial tag -->
+  <rect x="88" y="100" width="336" height="70" rx="12" fill="#1c1c08" opacity="0.85"/>
+  <text x="256" y="148" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="1">MATOSHRI</text>
+</svg>

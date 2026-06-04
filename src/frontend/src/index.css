@@ -1,0 +1,186 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer utilities {
+  /* Card elevation and layout utilities */
+  .card {
+    @apply rounded-lg border border-border bg-card shadow-card;
+  }
+
+  .card-header {
+    @apply border-b border-border px-6 py-4;
+  }
+
+  .card-content {
+    @apply px-6 py-4;
+  }
+
+  .card-footer {
+    @apply border-t border-border px-6 py-4;
+  }
+
+  /* Modern form inputs with amber focus */
+  input[type="text"],
+  input[type="number"],
+  input[type="date"],
+  select,
+  textarea {
+    @apply rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground placeholder-muted-foreground transition-colors;
+    @apply focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-20;
+  }
+
+  /* Button hierarchy */
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-md border border-border bg-background px-4 py-2 text-sm font-medium text-foreground shadow-sm transition-colors hover:bg-muted focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+  }
+
+  /* Payment status badges */
+  .badge-paid {
+    @apply inline-flex items-center rounded-full px-3 py-1 text-xs font-medium;
+    background-color: oklch(0.52 0.15 145 / 0.1);
+    color: oklch(0.52 0.15 145);
+  }
+
+  .badge-partial {
+    @apply inline-flex items-center rounded-full px-3 py-1 text-xs font-medium;
+    background-color: oklch(0.72 0.16 60 / 0.1);
+    color: oklch(0.72 0.16 60);
+  }
+
+  .badge-unpaid {
+    @apply inline-flex items-center rounded-full px-3 py-1 text-xs font-medium;
+    background-color: oklch(0.55 0.22 27 / 0.1);
+    color: oklch(0.55 0.22 27);
+  }
+}
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+    /* Light theme */
+    --background: 0.97 0.008 85;
+    --foreground: 0.15 0.02 50;
+    --card: 1 0 0;
+    --card-foreground: 0.15 0.02 50;
+    --popover: 1 0 0;
+    --popover-foreground: 0.15 0.02 50;
+    /* JCB Amber/Yellow primary */
+    --primary: 0.76 0.18 85;
+    --primary-foreground: 0.1 0.02 50;
+    --secondary: 0.94 0.01 80;
+    --secondary-foreground: 0.3 0.02 60;
+    --muted: 0.94 0.01 80;
+    --muted-foreground: 0.52 0.015 60;
+    --accent: 0.94 0.06 85;
+    --accent-foreground: 0.2 0.02 60;
+    --destructive: 0.55 0.22 27;
+    --destructive-foreground: 0.98 0 0;
+    --border: 0.9 0.012 80;
+    --input: 0.9 0.012 80;
+    --ring: 0.76 0.18 85;
+    --success: 0.52 0.15 145;
+    --success-foreground: 0.98 0 0;
+    --warning: 0.72 0.16 60;
+    --chart-1: 0.76 0.18 85;
+    --chart-2: 0.6 0.118 185;
+    --chart-3: 0.4 0.07 227;
+    --chart-4: 0.83 0.19 84;
+    --chart-5: 0.77 0.19 70;
+    --sidebar: 0.985 0 0;
+    --sidebar-foreground: 0.15 0.02 50;
+    --sidebar-primary: 0.76 0.18 85;
+    --sidebar-primary-foreground: 0.1 0.02 50;
+    --sidebar-accent: 0.94 0.01 80;
+    --sidebar-accent-foreground: 0.3 0.02 60;
+    --sidebar-border: 0.9 0.012 80;
+
+    --font-body: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, sans-serif;
+    --font-display: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, sans-serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+      monospace;
+    --sidebar-ring: 0.76 0.18 85;
+
+    --card-border: 0.88 0.012 80;
+  }
+
+  .dark {
+    --background: 0.13 0.018 240;
+    --foreground: 0.93 0.01 80;
+    --card: 0.17 0.02 240;
+    --card-foreground: 0.93 0.01 80;
+    --popover: 0.17 0.02 240;
+    --popover-foreground: 0.93 0.01 80;
+    --primary: 0.76 0.18 85;
+    --primary-foreground: 0.1 0.02 50;
+    --secondary: 0.22 0.025 240;
+    --secondary-foreground: 0.85 0.01 80;
+    --muted: 0.22 0.025 240;
+    --muted-foreground: 0.58 0.015 240;
+    --accent: 0.25 0.04 85;
+    --accent-foreground: 0.93 0.01 80;
+    --destructive: 0.55 0.22 27;
+    --destructive-foreground: 0.98 0 0;
+    --border: 0.26 0.025 240;
+    --input: 0.26 0.025 240;
+    --ring: 0.76 0.18 85;
+    --success: 0.52 0.15 145;
+    --success-foreground: 0.98 0 0;
+    --warning: 0.72 0.16 60;
+    --chart-1: 0.76 0.18 85;
+    --chart-2: 0.6 0.118 185;
+    --chart-3: 0.4 0.07 227;
+    --chart-4: 0.83 0.19 84;
+    --chart-5: 0.77 0.19 70;
+    --sidebar: 0.17 0.02 240;
+    --sidebar-foreground: 0.93 0.01 80;
+    --sidebar-primary: 0.76 0.18 85;
+    --sidebar-primary-foreground: 0.1 0.02 50;
+    --sidebar-accent: 0.22 0.025 240;
+    --sidebar-accent-foreground: 0.85 0.01 80;
+
+    --font-body: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, sans-serif;
+    --font-display: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, sans-serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+      monospace;
+    --sidebar-border: 0.26 0.025 240;
+    --sidebar-ring: 0.76 0.18 85;
+
+    --card-border: 0.22 0.025 240;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    font-weight: 600;
+  }
+
+  h1 {
+    @apply text-3xl tracking-tight;
+  }
+
+  h2 {
+    @apply text-2xl tracking-tight;
+  }
+
+  h3 {
+    @apply text-xl tracking-tight;
+  }
+}
